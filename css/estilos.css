@@ -3,24 +3,24 @@
    ========================================== */
 :root {
     /* Paleta Principal */
-    --color-fondo: #0F172A;         /* Azul Marino Profundo (Fondo general) */
-    --color-superficie: #1E293B;     /* Azul Noche Medio (Tarjetas y bloques) */
+    --color-fondo: #0F172A;        /* Azul Marino Profundo (Fondo general) */
+    --color-superficie: #1E293B;    /* Azul Noche Medio (Tarjetas y bloques) */
     --color-superficie-hover: #334155;
     
     /* Colores de Acento y Elegancia */
-    --color-acento: #D97706;         /* Dorado / Cobre Sobrio */
+    --color-acento: #D97706;        /* Dorado / Cobre Sobrio */
     --color-acento-hover: #B45309;
-    --color-borde: #334155;          /* Borde sutil oscuro */
+    --color-borde: #334155;         /* Borde sutil oscuro */
     
     /* Tipografía y Textos */
-    --color-texto: #F8FAFC;          /* Blanco de alta legibilidad */
+    --color-texto: #F8FAFC;         /* Blanco de alta legibilidad */
     --color-texto-secundario: #94A3B8; /* Gris neutro elegante */
     --fuente-principal: 'Poppins', 'Segoe UI', Roboto, sans-serif;
-    --max-ancho: 750px; /* Reducido de 1200px a 750px para que no sea tan ancho */
+    --max-ancho: 750px; 
 }
 
 
-/* Restablecimiento Básico */
+/* Restablecimiento Básico Corregido */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -68,7 +68,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px; /* Espacio entre el logo, texto e íconos */
+    gap: 12px;
     font-weight: 700;
     font-size: 1.3rem;
     color: var(--color-texto);
@@ -81,15 +81,13 @@ body {
     object-fit: contain;
 }
 
-/* Contenedor de las redes sociales al lado del título */
 .redes-header {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espacio entre cada icono */
-    margin-left: 8px; /* Separación respecto a 'Hampiq Mikhuy' */
+    gap: 8px;
+    margin-left: 8px;
 }
 
-/* Estilo base circular e interactivo para los íconos */
 .icono-red {
     display: inline-flex;
     justify-content: center;
@@ -104,12 +102,10 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Efectos al pasar el ratón por encima (Hover interactivo) */
 .icono-red:hover {
-    transform: translateY(-3px) scale(1.1); /* Efecto de elevación */
+    transform: translateY(-3px) scale(1.1);
 }
 
-/* Colores de marca opcionales al hacer hover */
 .icono-red.tiktok:hover {
     background-color: #000000;
     color: #00f2fe;
@@ -129,7 +125,7 @@ body {
     SECCIÓN HERO (BANNER PRINCIPAL)
    ========================================== */
 .hero {
-    padding: 5rem 0;
+    padding: 4rem 0;
     background: linear-gradient(180deg, var(--color-superficie) 0%, var(--color-fondo) 100%);
 }
 
@@ -145,7 +141,7 @@ body {
 }
 
 .hero-texto h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     line-height: 1.25;
     margin-bottom: 1.2rem;
     color: var(--color-texto);
@@ -153,14 +149,10 @@ body {
 }
 
 .hero-texto p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--color-texto-secundario);
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.5rem;
 }
-
-/* ==========================================
-   INTEGRACIÓN ELEGANTE DE LA IMAGEN HERO
-   ========================================== */
 
 .hero-imagen {
     flex: 1;
@@ -169,103 +161,31 @@ body {
     align-items: center;
 }
 
-/* Estilos para suavizar la imagen y evitar contrastes fuertes */
 .hero-imagen img {
     width: 100%;
-    max-width: 440px;
+    max-width: 380px;
     height: auto;
-    border-radius: 20px; /* Bordes suaves redondeados */
-    border: 2px solid rgba(217, 119, 6, 0.3); /* Borde sutil en tono dorado/cobre */
-    
-    /* Sombra difuminada cálida que conecta la imagen con el fondo oscuro */
+    border-radius: 20px;
+    border: 2px solid rgba(217, 119, 6, 0.3);
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), 
                 0 0 25px rgba(217, 119, 6, 0.25);
-    
-    /* Transición suave para efectos al pasar el cursor */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Efecto hover interactivo opcional */
 .hero-imagen img:hover {
     transform: scale(1.02);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 
-                0 0 35px rgba(217, 119, 6, 0.4);
-}
-
-/* Botones Sobrios */
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-}
-
-.btn-primario {
-    background-color: var(--color-acento);
-    color: #FFFFFF;
-}
-
-.btn-primario:hover {
-    background-color: var(--color-acento-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(217, 119, 6, 0.25);
 }
 
 /* ==========================================
-   SECCIÓN RECETAS (GRID DE TARJETAS)
+    SECCIÓN DE BIENVENIDA Y MINIATURA
    ========================================== */
-.seccion-recetas {
-    padding: 5rem 0;
-    border-top: 1px solid var(--color-borde);
+.seccion-bienvenida {
+    padding: 3rem 0;
 }
 
-.titulo-centrado {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.titulo-centrado h2 {
-    font-size: 2.2rem;
-    margin-bottom: 0.6rem;
-    color: var(--color-texto);
-}
-
-.titulo-centrado p {
-    color: var(--color-texto-secundario);
-}
-
-.buscador-contenedor {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
-}
-
-#buscador {
-    width: 100%;
-    max-width: 520px;
-    padding: 14px 22px;
-    border-radius: 8px;
-    border: 1px solid var(--color-borde);
-    background-color: var(--color-superficie);
-    color: var(--color-texto);
-    font-size: 0.95rem;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-#buscador:focus {
-    border-color: var(--color-acento);
-}
-
-/* Grid de Recetas */
 .grid-recetas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: 30px;
 }
 
@@ -273,7 +193,7 @@ body {
     background-color: var(--color-superficie);
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid var(--color-borde); /* <-- Esto es lo que dibuja el borde */
+    border: 1px solid var(--color-borde);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -285,25 +205,51 @@ body {
     border-color: #475569;
 }
 
-.tarjeta-img-box video {
+/* Contenedor de imagen proporción 16:9 exacta para que encaje la miniatura */
+.tarjeta-img-box {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantiene las proporciones del video */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
     display: block;
+    background-color: #000;
 }
 
-.etiqueta {
+.tarjeta-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-bienvenida:hover .tarjeta-img-box img {
+    transform: scale(1.03);
+}
+
+/* Ícono de Play flotante sobre la miniatura */
+.icono-play {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    background-color: var(--color-acento);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    background-color: rgba(217, 119, 6, 0.9);
     color: #FFFFFF;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    padding-left: 3px; /* Centrado óptico del ícono play */
+}
+
+.tarjeta-bienvenida:hover .icono-play {
+    background-color: var(--color-acento-hover);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .tarjeta-cuerpo {
@@ -322,8 +268,7 @@ body {
 .tarjeta-cuerpo p {
     font-size: 0.95rem;
     color: var(--color-texto-secundario);
-    margin-bottom: 1.5rem;
-    flex: 1;
+    margin: 0;
 }
 
 .btn-favorito {
