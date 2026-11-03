@@ -1,0 +1,429 @@
+/* ==========================================
+    HAMPIQ MIKHUY - PALETA AZUL MARINO
+   ========================================== */
+:root {
+    /* Paleta Principal */
+    --color-fondo: #0F172A;         /* Azul Marino Profundo (Fondo general) */
+    --color-superficie: #1E293B;     /* Azul Noche Medio (Tarjetas y bloques) */
+    --color-superficie-hover: #334155;
+    
+    /* Colores de Acento y Elegancia */
+    --color-acento: #D97706;         /* Dorado / Cobre Sobrio */
+    --color-acento-hover: #B45309;
+    --color-borde: #334155;          /* Borde sutil oscuro */
+    
+    /* Tipografía y Textos */
+    --color-texto: #F8FAFC;          /* Blanco de alta legibilidad */
+    --color-texto-secundario: #94A3B8; /* Gris neutro elegante */
+    --fuente-principal: 'Poppins', 'Segoe UI', Roboto, sans-serif;
+    --max-ancho: 750px; /* Reducido de 1200px a 750px para que no sea tan ancho */
+}
+
+
+/* Restablecimiento Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Contenedor Centralizado */
+.contenedor {
+    width: 90%;
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+}
+
+.contenedor-estrecho {
+    max-width: 650px;
+}
+
+/* ==========================================
+    ENCABEZADO Y NAVEGACIÓN
+   ========================================== */
+.header {
+    background-color: var(--color-superficie);
+    border-bottom: 1px solid var(--color-borde);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+/* Estilos del Logo y Título */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre el logo, texto e íconos */
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--color-texto);
+    letter-spacing: 0.5px;
+}
+
+.logo-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+/* Contenedor de las redes sociales al lado del título */
+.redes-header {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre cada icono */
+    margin-left: 8px; /* Separación respecto a 'Hampiq Mikhuy' */
+}
+
+/* Estilo base circular e interactivo para los íconos */
+.icono-red {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efectos al pasar el ratón por encima (Hover interactivo) */
+.icono-red:hover {
+    transform: translateY(-3px) scale(1.1); /* Efecto de elevación */
+}
+
+/* Colores de marca opcionales al hacer hover */
+.icono-red.tiktok:hover {
+    background-color: #000000;
+    color: #00f2fe;
+}
+
+.icono-red.facebook:hover {
+    background-color: #1877f2;
+    color: #ffffff;
+}
+
+.icono-red.youtube:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+/* ==========================================
+    SECCIÓN HERO (BANNER PRINCIPAL)
+   ========================================== */
+.hero {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, var(--color-superficie) 0%, var(--color-fondo) 100%);
+}
+
+.hero-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 2.8rem;
+    line-height: 1.25;
+    margin-bottom: 1.2rem;
+    color: var(--color-texto);
+    font-weight: 700;
+}
+
+.hero-texto p {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 2.2rem;
+}
+
+/* ==========================================
+   INTEGRACIÓN ELEGANTE DE LA IMAGEN HERO
+   ========================================== */
+
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para suavizar la imagen y evitar contrastes fuertes */
+.hero-imagen img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    border-radius: 20px; /* Bordes suaves redondeados */
+    border: 2px solid rgba(217, 119, 6, 0.3); /* Borde sutil en tono dorado/cobre */
+    
+    /* Sombra difuminada cálida que conecta la imagen con el fondo oscuro */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6), 
+                0 0 25px rgba(217, 119, 6, 0.25);
+    
+    /* Transición suave para efectos al pasar el cursor */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efecto hover interactivo opcional */
+.hero-imagen img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 
+                0 0 35px rgba(217, 119, 6, 0.4);
+}
+
+/* Botones Sobrios */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primario {
+    background-color: var(--color-acento);
+    color: #FFFFFF;
+}
+
+.btn-primario:hover {
+    background-color: var(--color-acento-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(217, 119, 6, 0.25);
+}
+
+/* ==========================================
+   SECCIÓN RECETAS (GRID DE TARJETAS)
+   ========================================== */
+.seccion-recetas {
+    padding: 5rem 0;
+    border-top: 1px solid var(--color-borde);
+}
+
+.titulo-centrado {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.titulo-centrado h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-texto);
+}
+
+.titulo-centrado p {
+    color: var(--color-texto-secundario);
+}
+
+.buscador-contenedor {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#buscador {
+    width: 100%;
+    max-width: 520px;
+    padding: 14px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#buscador:focus {
+    border-color: var(--color-acento);
+}
+
+/* Grid de Recetas */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-bienvenida {
+    background-color: var(--color-superficie);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-borde); /* <-- Esto es lo que dibuja el borde */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-bienvenida:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border-color: #475569;
+}
+
+.tarjeta-img-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene las proporciones del video */
+    display: block;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--color-acento);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-cuerpo {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjeta-cuerpo h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-texto);
+}
+
+.tarjeta-cuerpo p {
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.btn-favorito {
+    background: transparent;
+    border: 1px solid var(--color-acento);
+    color: var(--color-acento);
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-favorito:hover {
+    background-color: rgba(217, 119, 6, 0.1);
+}
+
+.btn-favorito.guardado {
+    background-color: var(--color-acento);
+    color: #FFFFFF;
+}
+
+/* ==========================================
+   SECCIÓN HIDRATACIÓN
+   ========================================== */
+.seccion-salud {
+    padding: 5rem 0;
+    background-color: var(--color-superficie);
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.contador-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 2rem 0;
+}
+
+.btn-circular {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-circular:hover {
+    border-color: var(--color-acento);
+    color: var(--color-acento);
+}
+
+#contador-vasos {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-texto);
+}
+
+.unidad {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+}
+
+.mensaje-agua {
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-acento);
+}
+
+/* ==========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================== */
+.footer {
+    background-color: #0B0F19;
+    color: var(--color-texto-secundario);
+    padding: 2.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-borde);
+}
+
+/* Responsive optimizado para celulares */
+@media (max-width: 768px) {
+    .hero-contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-contenido {
+        justify-content: center; /* Centra el logo y las redes en móviles */
+    }
+
+    .logo {
+        flex-wrap: wrap; /* Permite que si la pantalla es muy pequeña, los iconos bajen con orden sin deformar */
+        justify-content: center;
+    }
+}
