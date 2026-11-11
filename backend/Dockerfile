@@ -19,8 +19,12 @@ WORKDIR /var/www
 
 COPY . .
 
+# Asegurar permisos correctos para almacenamiento y archivos públicos
+RUN chown -R www-data:www-data /var/www/storage /var/www/public \
+    && chmod -R 775 /var/www/storage /var/www/public
+
 RUN composer install --no-dev --optimize-autoloader
 
 EXPOSE 8000
 
-CMD touch database/database.sqlite && php artisan config:clear && php artisan route:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
+CMD touch database/database.sqlite && php artisan config:clear && php artisan cache:clear && php artisan route:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8000
