@@ -293,7 +293,7 @@ body {
 }
 
 /* ==========================================
-   SECCIÓN HIDRATACIÓN
+    SECCIÓN HIDRATACIÓN
    ========================================== */
 .seccion-salud {
     padding: 5rem 0;
@@ -345,7 +345,7 @@ body {
 }
 
 /* ==========================================
-   PIE DE PÁGINA (FOOTER)
+    PIE DE PÁGINA (FOOTER)
    ========================================== */
 .footer {
     background-color: #0B0F19;
@@ -371,4 +371,46 @@ body {
         flex-wrap: wrap; /* Permite que si la pantalla es muy pequeña, los iconos bajen con orden sin deformar */
         justify-content: center;
     }
+}
+
+/* Botones de Autenticación */
+.btn-auth {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-auth:hover {
+    color: #4cd137; /* Verde o color de acento de tu marca */
+}
+
+.btn-registro {
+    background-color: #2e86de;
+    border: 1px solid #2e86de;
+}
+
+.btn-registro:hover {
+    background-color: #1b4f72;
+    color: #ffffff;
+}
+
+/* Corrección para los inputs de autenticación (Login / Register) */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: #0a1118 !important;
+    color: #ffffff !important;
+    border-color: #2e3b4e !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4cd137 !important;
+    box-shadow: 0 0 0 2px rgba(76, 209, 55, 0.2) !important;
+    color: #ffffff !important;
 }
